@@ -10,5 +10,11 @@
   "license": "ISC",
   "dependencies": {
     "min-util": "^1.10.1"
+  },
+  "devDependencies": {
+    "async": "^1.5.2",
+    "cheerio": "^0.20.0",
+    "lodash": "^4.5.1",
+    "min-request": "^1.4.1"
   }
 }
