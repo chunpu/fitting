@@ -64,6 +64,9 @@ async.map(pages, function(page, cb) {
 function getScore(arr) {
 	arr = _.uniq(arr, function(item) {
 		return item.link
+	}).filter(function(item) {
+		// 太少的不要
+		return item.moneyLeft > 5000
 	})
 
 	_.each(arr, function(item) {
@@ -74,7 +77,7 @@ function getScore(arr) {
 			// 利息太低
 			score -= 0.05
 		}
-		if (item.moneyLeft < 5000) {
+		if (item.moneyLeft < 8000) {
 			// 份额太少
 			score -= 0.1
 		}
