@@ -71,9 +71,15 @@ function getScore(arr) {
 		var score = item.lixi - y
 		item.y = y
 		if (item.lixi < 11) {
+			// 利息太低
 			score -= 0.05
 		}
 		if (item.moneyLeft < 5000) {
+			// 份额太少
+			score -= 0.1
+		}
+		if (item.days > 250) {
+			// 时间太长
 			score -= 0.1
 		}
 		item.score = score
